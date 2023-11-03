@@ -10,7 +10,7 @@ class Exercice3:
         # Implémenter la logique de récupération
         if cle in self.memoire:
             self.ordre.append(cle)
-            del(self.ordre[0])
+            #del(self.ordre[0])
             valeur = self.memoire.pop(cle)
             self.memoire[cle] = valeur
             return valeur
@@ -28,17 +28,3 @@ class Exercice3:
         # Implémenter la logique de libération
         self.memoire.clear()
 # Teste de fonctionnement
-
-cache = Exercice3(2)
-
-cache.put(1,1)
-cache.put(2,2)
-print(cache.memoire)
-print(cache.get(1))
-cache.put(3,3)
-print(cache.get(2))
-cache.put(4,4)
-print(cache.get(1))
-print(cache.get(3))
-print(cache.get(4))
-
